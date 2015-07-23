@@ -1,0 +1,1120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<!-- 前台部分 -->
+	<listener>
+		<listener-class>
+			com.lovo.cq.shopping10_1.listener.UserLoginListener
+		</listener-class>
+	</listener>
+	<filter>
+		<filter-name>WordsFilter</filter-name>
+		<filter-class>
+			com.lovo.cq.shopping10_1.filter.WordsFilter
+		</filter-class>
+		<init-param>
+			<param-name>filePath</param-name>
+			<param-value>/WEB-INF/word.txt</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>WordsFilter</filter-name>
+		<url-pattern>/checkLogin_Note</url-pattern>
+	</filter-mapping>
+
+	<servlet>
+		<description>
+			This is the description of my J2EE component
+		</description>
+		<display-name>
+			This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>LoginServlet</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.LoginServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+			This is the description of my J2EE component
+		</description>
+		<display-name>
+			This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>PageServlet</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.PageServlet
+		</servlet-class>
+	</servlet>
+
+	<servlet>
+		<description>
+			This is the description of my J2EE component
+		</description>
+		<display-name>
+			This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>RegisterServlet</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.RegisterServlet
+		</servlet-class>
+	</servlet>
+
+	<servlet>
+		<description>
+			This is the description of my J2EE component
+		</description>
+		<display-name>
+			This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>userManager</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.UserManager
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+			This is the description of my J2EE component
+		</description>
+		<display-name>
+			This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>ShowBooks</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.ShowBooks
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+			This is the description of my J2EE component
+		</description>
+		<display-name>
+			This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>ShowBookByIdServlet</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.ShowBookByIdServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+			This is the description of my J2EE component
+		</description>
+		<display-name>
+			This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>BuyBooksServlet</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.BuyBooksServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>DeleteItemServlet</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.DeleteItemServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>UpdateBookCount</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.UpdateBookCount
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>CheckLogin</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.CheckLogin
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>AddOrderServlet</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.AddOrderServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>IndexServlet</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.IndexServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+			This is the description of my J2EE component
+		</description>
+		<display-name>
+			This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>ShowAllBooksByType</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.ShowAllBooksByType
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+			This is the description of my J2EE component
+		</description>
+		<display-name>
+			This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>SearchServlet</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.SearchServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+			This is the description of my J2EE component
+		</description>
+		<display-name>
+			This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>PageSearchServlet</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.PageSearchServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+			This is the description of my J2EE component
+		</description>
+		<display-name>
+			This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>ShowNoteServlet</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.ShowNoteServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+			This is the description of my J2EE component
+		</description>
+		<display-name>
+			This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>PageNoteServlet</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.PageNoteServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+			This is the description of my J2EE component
+		</description>
+		<display-name>
+			This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>AddNoteServlet</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.AddNoteServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+			This is the description of my J2EE component
+		</description>
+		<display-name>
+			This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>CheckLogin_Note</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.CheckLogin_Note
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+			This is the description of my J2EE component
+		</description>
+		<display-name>
+			This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>CheckNameExist</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.CheckNameExist
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+			This is the description of my J2EE component
+		</description>
+		<display-name>
+			This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>RandomCodeServlet</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.RandomCodeServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+			This is the description of my J2EE component
+		</description>
+		<display-name>
+			This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>CheckRandomCode</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.CheckRandomCode
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+			This is the description of my J2EE component
+		</description>
+		<display-name>
+			This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>ShowSuperTypeServlet</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.ShowSuperTypeServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+			This is the description of my J2EE component
+		</description>
+		<display-name>
+			This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>ShowSubTypeServlet</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.ShowSubTypeServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+			This is the description of my J2EE component
+		</description>
+		<display-name>
+			This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>FindUser</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.FindUser
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+			This is the description of my J2EE component
+		</description>
+		<display-name>
+			This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>FindAnswer</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.FindAnswer
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+			This is the description of my J2EE component
+		</description>
+		<display-name>
+			This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>UpdataPwd</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.UpdataPwd
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+			This is the description of my J2EE component
+		</description>
+		<display-name>
+			This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>DetailSearch</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.DetailSearch
+		</servlet-class>
+	</servlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/login</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>PageServlet</servlet-name>
+		<url-pattern>/page</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>RegisterServlet</servlet-name>
+		<url-pattern>/register</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>userManager</servlet-name>
+		<url-pattern>/userManager</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ShowBooks</servlet-name>
+		<url-pattern>/showBooks</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ShowBookByIdServlet</servlet-name>
+		<url-pattern>/showBookByIdServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>BuyBooksServlet</servlet-name>
+		<url-pattern>/buyBooksServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DeleteItemServlet</servlet-name>
+		<url-pattern>/deleteItemServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UpdateBookCount</servlet-name>
+		<url-pattern>/updateBookCount</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CheckLogin</servlet-name>
+		<url-pattern>/checkLogin</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AddOrderServlet</servlet-name>
+		<url-pattern>/addOrderServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>IndexServlet</servlet-name>
+		<url-pattern>/index</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ShowAllBooksByType</servlet-name>
+		<url-pattern>/showAllBooksByType</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SearchServlet</servlet-name>
+		<url-pattern>/searchServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>PageSearchServlet</servlet-name>
+		<url-pattern>/pageSearchServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ShowNoteServlet</servlet-name>
+		<url-pattern>/showNoteServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>PageNoteServlet</servlet-name>
+		<url-pattern>/pageNoteServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AddNoteServlet</servlet-name>
+		<url-pattern>/addNoteServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CheckLogin_Note</servlet-name>
+		<url-pattern>/checkLogin_Note</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CheckNameExist</servlet-name>
+		<url-pattern>/checkNameExist</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>RandomCodeServlet</servlet-name>
+		<url-pattern>/code</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CheckRandomCode</servlet-name>
+		<url-pattern>/checkRandomCode</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ShowSuperTypeServlet</servlet-name>
+		<url-pattern>/showSuperTypeServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ShowSubTypeServlet</servlet-name>
+		<url-pattern>/showSubTypeServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>FindUser</servlet-name>
+		<url-pattern>/findUser</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>FindAnswer</servlet-name>
+		<url-pattern>/findAnswer</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UpdataPwd</servlet-name>
+		<url-pattern>/updataPwd</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DetailSearch</servlet-name>
+		<url-pattern>/detailSearch</url-pattern>
+	</servlet-mapping>
+
+
+
+	<!-- 后台部分 -->
+	<listener>
+		<listener-class>
+			com.lovo.cq.shopping10_1.listener.AdminLoginListener
+		</listener-class>
+	</listener>
+	<filter>
+		<filter-name>code</filter-name>
+		<filter-class>
+			com.lovo.cq.shopping10_1.filter.UnicodeFilter
+		</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>code</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>adminlogin</filter-name>
+		<filter-class>
+			com.lovo.cq.shopping10_1.filter.AdminLoginFilter
+		</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>adminlogin</filter-name>
+		<url-pattern>/Admin/pages/*</url-pattern>
+	</filter-mapping>
+
+	<servlet>
+		<servlet-name>GetAllUserServlet</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.GetAllUserServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GetSubTypeBySuperTypeId</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.GetSubTypeBySuperTypeId
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GetSuperType</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.GetSuperType
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>DeleteUserServlet</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.DeleteUserServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GetAllBookServlet</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.GetAllBookServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GetAllNotesServlet</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.GetAllNotesServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>AddBookServlet</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.AddBookServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>CheckBookNameIsExist</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.CheckBookNameIsExist
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>CheckISBNIsExist</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.CheckISBNIsExist
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GetOneUserServlet</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.GetOneUserServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>AdminLoginServlet</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.AdminLoginServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GetUserPagerServlet</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.GetUserPagerServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>AddSuperTypeServlet</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.AddSuperTypeServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>AddSubTypeServlet</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.AddSubTypeServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>AddInformServlet</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.AddInformServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GetAllInformServlet</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.GetAllInformServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>DeleteInformServlet</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.DeleteInformServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>UpdateInformServlet</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.UpdateInformServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GetOneInformServlet</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.GetOneInformServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GetAllOrderServlet</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.GetAllOrderServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GetOneOrderServlet</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.GetOneOrderServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GetNotSendOrderServlet</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.GetNotSendOrderServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GetSendOrderServlet</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.GetSendOrderServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>AdminSendOrderServlet</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.AdminSendOrderServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GetBookByBookNameServlet</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.GetBookByBookNameServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GetAllBookNameServlet</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.GetAllBookNameServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>DeleteNoteServlet</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.DeleteNoteServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GetInformPagerServlet</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.GetInformPagerServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GetNotePagerServlet</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.GetNotePagerServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GetOrderPagerServlet</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.GetOrderPagerServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GetOrderSendPagerServlet</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.GetOrderSendPagerServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>DeleteOrderServlet</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.DeleteOrderServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GetNotSendOrderPagerServlet</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.GetNotSendOrderPagerServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GetOrderNotSendPagerServlet</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.GetOrderNotSendPagerServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GetOrderFreezePagerServlet</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.GetOrderFreezePagerServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>DeleteFreezeOrderServlet</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.DeleteFreezeOrderServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>FreezeOrderServlet</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.FreezeOrderServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GetBookPagerServlet</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.GetBookPagerServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>DeleteBookServlet</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.DeleteBookServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>AdminUpdatePassword</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.AdminUpdatePassword
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>AdminLogout</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.AdminLogout
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>CheckSuperTypeIsExist</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.CheckSuperTypeIsExist
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>CheckSubTypeIsExist</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.CheckSubTypeIsExist
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+			This is the description of my J2EE component
+		</description>
+		<display-name>
+			This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>UserLoginOut</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.UserLoginOut
+		</servlet-class>
+	</servlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<servlet-mapping>
+		<servlet-name>GetAllUserServlet</servlet-name>
+		<url-pattern>/getAllUserServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetSubTypeBySuperTypeId</servlet-name>
+		<url-pattern>/getSubTypeBySuperTypeId</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetSuperType</servlet-name>
+		<url-pattern>/getSuperType</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DeleteUserServlet</servlet-name>
+		<url-pattern>/deleteUser</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetAllBookServlet</servlet-name>
+		<url-pattern>/getAllBookServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetAllNotesServlet</servlet-name>
+		<url-pattern>/getAllNotesServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AddBookServlet</servlet-name>
+		<url-pattern>/addBookServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CheckBookNameIsExist</servlet-name>
+		<url-pattern>/checkBookNameIsExist</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CheckISBNIsExist</servlet-name>
+		<url-pattern>/checkISBNIsExist</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetOneUserServlet</servlet-name>
+		<url-pattern>/getOneUserServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AdminLoginServlet</servlet-name>
+		<url-pattern>/adminLoginServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetUserPagerServlet</servlet-name>
+		<url-pattern>/getUserPagerServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AddSuperTypeServlet</servlet-name>
+		<url-pattern>/addSuperTypeServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AddSubTypeServlet</servlet-name>
+		<url-pattern>/addSubTypeServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AddInformServlet</servlet-name>
+		<url-pattern>/addInformServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetAllInformServlet</servlet-name>
+		<url-pattern>/getAllInformServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DeleteInformServlet</servlet-name>
+		<url-pattern>/deleteInform</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UpdateInformServlet</servlet-name>
+		<url-pattern>/updateInformServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetOneInformServlet</servlet-name>
+		<url-pattern>/getOneInformServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetAllOrderServlet</servlet-name>
+		<url-pattern>/getAllOrderServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetOneOrderServlet</servlet-name>
+		<url-pattern>/getOneOrderServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetNotSendOrderServlet</servlet-name>
+		<url-pattern>/getNotSendOrderServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetSendOrderServlet</servlet-name>
+		<url-pattern>/getSendOrderServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AdminSendOrderServlet</servlet-name>
+		<url-pattern>/adminSendOrderServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetBookByBookNameServlet</servlet-name>
+		<url-pattern>/getBookByBookNameServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetAllBookNameServlet</servlet-name>
+		<url-pattern>/getAllBookNameServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DeleteNoteServlet</servlet-name>
+		<url-pattern>/deleteNote</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetInformPagerServlet</servlet-name>
+		<url-pattern>/getInformPagerServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetNotePagerServlet</servlet-name>
+		<url-pattern>/getNotePagerServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetOrderPagerServlet</servlet-name>
+		<url-pattern>/getOrderPagerServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetOrderSendPagerServlet</servlet-name>
+		<url-pattern>/getOrderSendPagerServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DeleteOrderServlet</servlet-name>
+		<url-pattern>/deleteOrderServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetNotSendOrderPagerServlet</servlet-name>
+		<url-pattern>/getNotSendOrderPagerServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetOrderNotSendPagerServlet</servlet-name>
+		<url-pattern>/getOrderNotSendPagerServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetOrderFreezePagerServlet</servlet-name>
+		<url-pattern>/getOrderFreezePagerServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DeleteFreezeOrderServlet</servlet-name>
+		<url-pattern>/deleteFreezeOrderServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>FreezeOrderServlet</servlet-name>
+		<url-pattern>/freezeOrderServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetBookPagerServlet</servlet-name>
+		<url-pattern>/getBookPagerServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DeleteBookServlet</servlet-name>
+		<url-pattern>/deleteBookServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AdminUpdatePassword</servlet-name>
+		<url-pattern>/adminUpdatePassword</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AdminLogout</servlet-name>
+		<url-pattern>/adminLogout</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CheckSuperTypeIsExist</servlet-name>
+		<url-pattern>/checkSuperTypeIsExist</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CheckSubTypeIsExist</servlet-name>
+		<url-pattern>/checkSubTypeIsExist</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UserLoginOut</servlet-name>
+		<url-pattern>/userLoginOut</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- 胡毅 -->
+	<servlet>
+		<description>
+			This is the description of my J2EE component
+		</description>
+		<display-name>
+			This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>OneUserManameServlet</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.OneUserManameServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+			This is the description of my J2EE component
+		</description>
+		<display-name>
+			This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>UpdatePassword</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.UpdatePassword
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+			This is the description of my J2EE component
+		</description>
+		<display-name>
+			This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>UpdateUserAll</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.UpdateUserAll
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>src</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.common.RandomCodeServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+			This is the description of my J2EE component
+		</description>
+		<display-name>
+			This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>UpdateUserTrue</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.UpdateUserTrue
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+			This is the description of my J2EE component
+		</description>
+		<display-name>
+			This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>CheckCode</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.CheckCode
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+			This is the description of my J2EE component
+		</description>
+		<display-name>
+			This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>SelectOrder</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.SelectOrder
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+			This is the description of my J2EE component
+		</description>
+		<display-name>
+			This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>SonOrder</servlet-name>
+		<servlet-class>
+			com.lovo.cq.shopping10_1.servlet.SonOrder
+		</servlet-class>
+	</servlet>
+
+
+
+
+
+
+	<servlet-mapping>
+		<servlet-name>OneUserManameServlet</servlet-name>
+		<url-pattern>/okLoggin</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UpdatePassword</servlet-name>
+		<url-pattern>/newPassword</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UpdateUserAll</servlet-name>
+		<url-pattern>/updateUserAll</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>src</servlet-name>
+		<url-pattern>/src</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UpdateUserTrue</servlet-name>
+		<url-pattern>/updateUserTwo</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CheckCode</servlet-name>
+		<url-pattern>/checkcode</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SelectOrder</servlet-name>
+		<url-pattern>/selectOrder</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SonOrder</servlet-name>
+		<url-pattern>/son</url-pattern>
+	</servlet-mapping>
+</web-app>
